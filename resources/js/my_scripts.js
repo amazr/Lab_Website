@@ -32,8 +32,23 @@ function viewStudentStats(id, toggle) {
 		}
 	}
 	else if (toggle === 1) {
+		
 		elem.style.visibility="visible";
 		elem.style.height="auto";
+
+		if (id === 'student_status') {
+			let us = document.getElementById('undergrad_select');
+			let gs = document.getElementById('grad_select');
+
+			if (document.getElementById('undergrad').checked) {
+				us.style.visibility="visible";
+				us.style.height="auto";
+			}
+			else if (document.getElementById('graduate').checked) {
+				gs.style.visibility="visible";
+				gs.style.height="auto";
+			}
+		}
 	}
 }
 
